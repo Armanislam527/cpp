@@ -1,5 +1,5 @@
 #include <iostream>
-#include<cstring>
+#include <cstring>
 using namespace std;
 
 int main()
@@ -13,23 +13,26 @@ int main()
         {
             if (i == 0)
             {
-                cout << "========";
+                cout << "=========";
             }
             else
             {
-                count =i*j;
-                int l = size(count);
-                if(l==2){
-                cout << count <<"      ";
+                count = i * j;
+                if (count == 0 )
+                {
+                    cout << "||\t";
                 }
-                else{
-                    cout << count <<"       ";
+
+                else
+                {
+
+                    cout << j<<"*"<<i<<"="<< count << "\t";
                 }
-            } 
+            }
             j++;
         } while (j < 11);
-        cout << endl;
-        j=1;
+        cout <<"||"<< endl;
+        j = 0;
         // cout << i << " ";
         i++;
         sum += i;
