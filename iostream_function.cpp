@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <locale>
+#include<limits>
 using namespace std;
 int main()
 {
@@ -13,6 +14,7 @@ int main()
     clog << "Logging some program informaation." << endl;
     wstring wname;
     wcout << L"Enter your wide-character name:";
+    wcin.ignore(numeric_limits<streamsize>::max(), '\n');
     wcin >> wname;
     wcout << L"Hello, "<< wname <<L" !"<<endl;
     wcerr << L"This is a wide-character error message." << endl;
