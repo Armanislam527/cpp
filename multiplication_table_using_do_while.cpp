@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstring>
+// #include <cstring>
 using namespace std;
 
 int main()
@@ -18,7 +18,7 @@ int main()
             else
             {
                 count = i * j;
-                if (count == 0 )
+                if (count == 0)
                 {
                     cout << "||\t";
                 }
@@ -26,18 +26,18 @@ int main()
                 else
                 {
 
-                    cout << j<<"*"<<i<<"="<< count << "\t";
+                    cout << j << "*" << i << "=" << count << "\t";
                 }
             }
             j++;
         } while (j < 11);
-        cout <<"||"<< endl;
+        cout << "\t||" << endl;
         j = 0;
         // cout << i << " ";
-        i++;
+        ++i;
         sum += i;
     } while (i < 11);
-    cout << endl
-         << "The sum is " << sum << endl;
+    // cout << endl
+    //     << "The sum is " << sum << endl;
     return 0;
 }
