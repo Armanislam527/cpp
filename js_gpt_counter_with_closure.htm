@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter with closure</title>
+</head>
+<body>
+    <h1>counter with closure</h1>
+    <script>
+        function createcounter(startvalue){
+            let count = startvalue;
+            return function(){
+                count++;
+                console.log (`Current count is : ${count}`);
+            };
+        }
+        let counter =createcounter(5)
+        counter();
+        counter();
+        counter();
+        counter();
+        counter();
+        counter();
+        
+    </script>
+</body>
+</html>
