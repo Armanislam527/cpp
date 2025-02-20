@@ -1,0 +1,7 @@
+Student Name: arman islam
+Roll Number: 234
+Total Semester: 0
+
+Overall CGPA: -nan
+Total Points Secured: 0.00
+Semester Total Credit: 0.00
