@@ -82,7 +82,8 @@ void MainWindow::calculateCGPA()
     // Display result
     QString result = "Student Name: " + name + "\n";
     result += "Roll Number: " + roll + "\n";
-    result += "Overall CGPA: " + QString::number(cgpa, 'f', 2) + "\n";
+    result += "Overall CGPA: " + QString::number(cgpa, 'f', 2) + "\n\n\n";
+    result += "----------------------------------------------\nAuthor information is below:\n Arman\n Roll:\t 230623\n reg:\t 1065512\n Department of Information and Communication Engineering";
 
     ui->labelResult->setText(result);
 }

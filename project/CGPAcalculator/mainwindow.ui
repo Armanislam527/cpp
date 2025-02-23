@@ -76,8 +76,8 @@
    <widget class="QPushButton" name="pushButtonCalculate">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>180</y>
+      <x>360</x>
+      <y>190</y>
       <width>88</width>
       <height>25</height>
      </rect>
@@ -89,10 +89,10 @@
    <widget class="QTextEdit" name="labelResult">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>20</x>
       <y>220</y>
-      <width>501</width>
-      <height>161</height>
+      <width>761</width>
+      <height>301</height>
      </rect>
     </property>
    </widget>
@@ -106,7 +106,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Marks and Grades(comma separated per line one subject)</string>
+     <string>Marks and Grades(space separated per line one subject)</string>
     </property>
    </widget>
    <widget class="QSpinBox" name="spinBoxSemesters">
@@ -117,6 +117,12 @@
       <width>44</width>
       <height>26</height>
      </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>8</number>
     </property>
    </widget>
    <widget class="QTextEdit" name="textEditGrades">
@@ -144,4 +150,4 @@
  </widget>
  <resources/>
  <connections/>
-</ui>   
+</ui>
