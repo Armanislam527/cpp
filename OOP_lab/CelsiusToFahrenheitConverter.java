@@ -1,48 +1,43 @@
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
+import java.awt.event.*;
 
 public class CelsiusToFahrenheitConverter extends JFrame {
 
-    private JTextField celsiusField;
-    private JLabel resultLabel;
+    private JTextField getcel;
+    private JLabel temp;
 
     public CelsiusToFahrenheitConverter() {
-        setTitle("Celsius to Fahrenheit Converter");
+        setTitle("Temperature Conveerter");
         setSize(350, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new GridLayout(3, 2, 10, 10));
-        JLabel celsiusLabel = new JLabel("Enter Celsius:");
-        celsiusField = new JTextField();
+        setLayout(new GridLayout(3, 2));
+        JLabel celciusLabel = new JLabel("Celcius:");
+        getcel = new JTextField();
+        temp = new JLabel(" ");
         JButton convertButton = new JButton("Convert");
-        resultLabel = new JLabel("Fahrenheit: ");
         convertButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                convertTemperature();
+                try {
+                    double celcius = Double.parseDouble(getcel.getText().trim());
+                    double fahrenheit = (celcius * 9 / 5) + 32;
+                    temp.setText("Fahrenheit: " + fahrenheit);
+                } catch (NumberFormatException ex) {
+                    temp.setText("Invalid input");
+                }
             }
         });
-        add(celsiusLabel);
-        add(celsiusField);
+        add(celciusLabel);
+        add(getcel);
         add(convertButton);
-        add(resultLabel);
+        add(temp);
         setLocationRelativeTo(null);
         setVisible(true);
     }
 
-    private void convertTemperature() {
-        try {
-double celsius = Double.parseDouble(celsiusField.getText());
- double fahrenheit = (celsius * 9 / 5) + 32;
- resultLabel.setText("Fahrenheit: " + fahrenheit);
- } catch (NumberFormatException e) {
- resultLabel.setText("Invalid Input!");
- }
- }
- public static void main(String[] args) {
- new CelsiusToFahrenheitConverter();
- }
+    public static void main(String[] args) {
+        new CelsiusToFahrenheitConverter();
+    }
 }
