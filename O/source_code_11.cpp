@@ -26,10 +26,7 @@ int main()
             b = c;
         else
             a = c;
-    }
-    wh
-
-        ile(fabs(f(c)) > tolerance);
+    } while (fabs(f(c)) > tolerance);
 
     cout << "The root is approximately: " << c << endl;
     return 0;

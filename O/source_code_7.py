@@ -1,3 +1,4 @@
+import math;
 def backward_interpolation(x, y, X):
     n = len(y)
     diff = [y.copy()] + [[0]*n for _ in range(n-1)]
