@@ -11,4 +11,4 @@ def lagrange_interpolation(x, y, X):
 
 x = [5,6,9,11]
 y = [12,13,14,16]
-print("y at x = 10:", lagrange_interpolation(x, y, 10))
+print("Estimated value of y at x = 10:", lagrange_interpolation(x, y, 10))

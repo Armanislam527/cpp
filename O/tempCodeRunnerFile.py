@@ -16,4 +16,4 @@ def forward_interpolation(x, y, X):
 import math
 x = [1911, 1921, 1931, 1941, 1951, 1961]
 y = [12, 15, 20, 27, 39, 52]
-print("Estimated population in 1946:\t", forward_interpolation(x, y, 1946))
+print("Estimated population in 1946:", forward_interpolation(x, y, 1946))
