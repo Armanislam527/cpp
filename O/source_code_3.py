@@ -16,6 +16,7 @@ def welch_powell_coloring(graph):
                 can_color = True
                 for k in range(n):
                     if graph[vertex[j]][k] and color[k] == current_color:
+                        print(graph[vertex[j]][k], color[k])
                         can_color = False
                         break
                 if can_color and color[vertex[j]] == 0:
